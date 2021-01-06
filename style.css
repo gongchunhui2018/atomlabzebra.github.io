@@ -1,0 +1,119 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  text-decoration: none; 
+  background: #1e1e1e;;
+  display: grid;
+}
+
+.layout {
+  display: grid;
+  justify-items: center;
+  align-items: center; /* 选项元素居中 */
+  margin-top: 40px;
+  row-gap: 40px;
+}
+
+.artboard {
+  display: grid;
+  justify-items: center;
+  width: 812px;
+  height: 375px;
+  background:#ffffff;
+  border-radius: 16px;
+}
+
+.data {
+  width: 180px;
+  height: 375px;
+  background: #181818
+}
+
+.universalGroup {
+  display: grid;
+  column-gap: 80px;
+  grid-auto-flow: column;
+  justify-items: center;
+  margin-top: 110px;
+  width: 360px;
+  height: 140px;
+}
+
+.universal-r {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.universal-f {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.multipleGroup {
+  display: grid;
+  column-gap: 80px;
+  grid-auto-flow: column;
+  justify-items: center;
+  margin-top: 110px;
+  width: 580px;
+  height: 140px;
+}
+
+.multiple-s {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.multiple-r {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.multiple-f {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.dragGroup {
+  display: grid;
+  column-gap: 80px;
+  grid-auto-flow: column;
+  justify-items: center;
+  margin-bottom: 0px;
+  width: 300px;
+  height: 100px;
+}
+
+.drag-r {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.drag-f {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.collide-d {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  margin-left: 400px;
+  margin-top: 40px;
+}
