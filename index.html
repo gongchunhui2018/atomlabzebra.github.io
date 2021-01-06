@@ -1,3 +1,48 @@
-<p>Hello 大家好</p>
-<p>这是龚春辉</p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@[p5_version]/lib/p5.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- 通用单选 -->
+    <div class="artboard" style="background:url(./img/universal-bg.svg)">
+      <div class="universalGroup">
+        <div class="universal-r" id="ur"><img src="./img/universal-r.svg" width="140" height="140"/></div>
+        <div class="universal-f" id="uf"><img src="./img/universal-f.svg" width="140" height="140"/></div>
+      </div>
+    </div>
+
+    <!-- 通用多选 -->
+    <div class="artboard" style="background:url(./img/multiple-bg.svg)">
+      <div class="multipleGroup">
+        <div class="multiple-s" id="ms"><img src="./img/multiple-s.svg" width="140" height="140"/></div>
+        <div class="multiple-r" id="mr"><img src="./img/multiple-r.svg" width="140" height="140"/></div>
+        <div class="multiple-f" id="mf"><img src="./img/multiple-f.svg" width="140" height="140"/></div>
+      </div>  
+    </div>
+
+    <!-- 拖拽 -->
+    <div class="artboard" style="background:url(./img/drag-bg.svg)">
+      <div class="collide-d" id="dd"><img src="./img/collide-d.svg" width="100" height="100"/></div>
+      <div class="dragGroup">
+        <div class="drag-r" id="dr"><img src="./img/drag-r.svg" width="100" height="100"/></div>
+        <div class="drag-f" id="df"><img src="./img/drag-f.svg" width="100" height="100"/></div> 
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="./anime.min.js"></script>
+  <script src="./sketch.js"></script>
+</body>
+
+</html>
