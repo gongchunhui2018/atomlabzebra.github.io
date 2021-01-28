@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="812" height="375" viewBox="0 0 812 375">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="812" height="375" fill="#FFF"/>
+    <text fill="#4D4D4D" font-family="FZZeBrach-Regular, FZZeBra-ch" font-size="20">
+      <tspan x="136" y="301">选项被选中</tspan>
+    </text>
+    <text fill="#4D4D4D" font-family="FZZeBrach-Regular, FZZeBra-ch" font-size="20">
+      <tspan x="366" y="301">正确选项</tspan>
+    </text>
+    <text fill="#4D4D4D" font-family="FZZeBrach-Regular, FZZeBra-ch" font-size="20">
+      <tspan x="586" y="301">错误选项</tspan>
+    </text>
+  </g>
+</svg>
