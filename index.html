@@ -1,19 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QuickStart</title>
+<html lang="">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <ul>
+    <li><a href="#rightText">正确反馈</a></li>
+    <li><a href="#falseText">错误反馈</a></li>
+    <li><a href="#selectText">选中反馈</a></li>
+    <li><a href="#dragText">拖放反馈</a></li>
+    <li><a href="#lineText">连线反馈</a></li>
+    <li><a href="#rightText">例子</a></li>
+  </ul>
+  <div class="UXLayout">
+    <div id="rightText"> 
+      <h3>正确反馈</h3>
+      <p>当手指触摸选项时，选项大小缩小至0.8；当手指离开选项时，选项大小恢复至1，且背景填充"#FF6557",透明度为20%。</p>
+    </div>
+    <!-- 正确 -->
+    <div class="artboard">
+        <svg id="Right" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+            <rect class="RS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="16"/>
+            <rect class="RR" width="140" height="140" fill="#4ACB76" opacity="0" rx="16"/>
+            <circle class="RM" cx="70" cy="70" r="50" fill="#42A4FF"/>
+        </svg>
+    </div>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <div id="falseText"> 
+      <h3>错误反馈</h3>
+      <p>当手指触摸选项时，选项大小缩小至0.8；当手指离开选项时，选项大小恢复至1，选项左右晃动。</p>
+    </div>
+    <!-- 错误 -->
+    <div class="artboard">
+        <svg id="False" class="Fsvg" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+            <rect class="FS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="16"/>
+            <circle class="FM" cx="70" cy="70" r="50" fill="#FF6557"/>
+        </svg>
+    </div>
     
-    <script src="./p5/p5.easycam.js"></script>
+    <div id="selectText"> 
+      <h3>选中反馈</h3>
+      <p>当手指触摸选项时，选项大小缩小至0.8；当手指离开选项时，选项大小恢复至1，且背景填充"#F2F2F7"。</p>
+    </div>
+    <!-- 选中 -->
+    <div class="artboard">
+        <svg id="Select" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+            <rect class="SS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="18"/>
+            <circle class="SM" cx="70" cy="70" r="50" fill="#86D12A"/>
+        </svg>
+    </div>
     
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    <div id="dragText"> 
+      <h3>拖放反馈</h3>
+      <p>当手指触摸选项时，选项大小缩放至1.2；将选项拖拽至目标区域，当触碰到目标区域边缘时，目标区域大小缩放至1.2，并吸附选项至目标区域位置，同时虚线框消失；若未触碰到目标区域边缘，选项返回原坐标。</p>
+    </div>
+    <!-- 拖放 -->
+    <div class="dragGroup">
+        <!-- 碰撞区域 -->
+        <img id="Collide" class="Collide" src="./img/collide-icon.svg" width="100" height="100"/>
+        <!-- 拖放目标 -->
+        <div d="Drag" class="DM"></div>
+    </div>
+    
+    <div id="lineText"> 
+      <h3>连线反馈</h3>
+      <p>当手指触摸第一个选项时，选项大小缩小至0.8；当手指离开第一个选项时，选项大小恢复至1，且背景填充"#F2F2F7"，其余选项均为备选选项；当手指触摸第二个选项时，如果当前选项为错误选项，错误选项晃动；如果当前选项正确，第一个选项和第二个选项背景填充"#FF6557",透明度为20%，且两选项之间出现连线。</p>
+    </div>
+    <!-- 连线 -->
+    <div class="artboard">
+      <div class="lineGroup"> 
+        <svg id="optionA" class="optionA" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+          <rect class="LAS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="16"/>
+          <rect class="LAR" width="140" height="140" fill="#4ACB76" opacity="0" rx="16"/>
+          <circle class="LAM" cx="70" cy="70" r="50" fill="#42A4FF"/>
+        </svg>
+        <svg id="optionB" class="optionB" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+          <rect class="LBS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="16"/>
+          <rect class="LBR" width="140" height="140" fill="#4ACB76" opacity="0" rx="16"/>
+          <circle class="LBM" cx="70" cy="70" r="50" fill="#86D12A"/>
+        </svg>
+        <svg id="optionC" class="optionC" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+          <rect class="LCS" width="140" height="140" fill="#F2F2F7" opacity="0" rx="16"/>
+          <rect class="LCR" width="140" height="140" fill="#4ACB76" opacity="0" rx="16"/>
+          <circle class="LCM" cx="70" cy="70" r="50" fill="#FF6557"/>
+        </svg>
+        <svg id="Line" xmlns="http://www.w3.org/2000/svg" width="108" height="94" viewBox="0 0 108 94">
+          <line class="Line" x1="140" x2="244" y1="160" y2="70" fill="none" opacity="0" stroke="#4ACB76" stroke-dasharray="6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" transform="translate(-138 -68)"/>
+        </svg>
+        
+      </div>
+    </div>
+
+  </div>
   
-  <body oncontextmenu="return false;">
-    <script src="QuickStart.js"></script>
-  </body>
-  
+  <script src="./lib/minified/gsap.min.js"></script>
+  <script src="./lib/minified/CSSRulePlugin.min.js"></script>
+  <script src="./lib/minified/Draggable.min.js"></script>
+  <script src="./lib/jquery-2.1.1.min.js"></script>
+  <script src="./lib/anime.min.js"></script>
+  <script src="./lib/common.js"></script>
+  <script src="./sketch.js"></script>
+</body>
+
 </html>
